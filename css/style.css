@@ -14,7 +14,7 @@ body {
   --primary-text-color: #000;
   --alternate-text-color: #fff;
 
-  --primary-background: rgb(240, 240, 240);
+  --primary-background: rgb(245, 245, 245);
   --alternate-background: rgb(230, 230, 238);
 }
 
@@ -32,7 +32,7 @@ nav {
   left: 10%;
   top: 50%;
   transform: translateY(-55%);
-  font-family: 'Abril Fatface', 'Playfair Display SC', serif;
+  font-family: "Abril Fatface", "Playfair Display SC", serif;
   letter-spacing: 0.1em;
   font-weight: normal;
   font-size: 34px;
@@ -63,8 +63,8 @@ nav {
   z-index: 1;
 }
 .nav-links.open-nav {
-  clip-path: circle(1500px at 100% -10%);
-  -webkit-clip-path: circle(1500px at 100% -10%);
+  clip-path: circle(1200px at 100% -10%);
+  -webkit-clip-path: circle(1200px at 100% -10%);
   pointer-events: all;
 }
 
@@ -144,6 +144,8 @@ nav {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--alternate-text-color);
   display: flex;
   flex-direction: column;
@@ -159,7 +161,7 @@ nav {
 }
 
 .name-text {
-  font-family: 'Playfair Display SC', serif;
+  font-family: "Playfair Display SC", serif;
   letter-spacing: 0.1em;
   font-weight: 700;
   margin-bottom: 0.8em;
@@ -225,7 +227,7 @@ nav {
 .cv-button {
   background: var(--alternate-text-color);
   color: var(--primary-dark-color);
-  font-family: 'Playfair Display SC', serif;
+  font-family: "Playfair Display SC", serif;
   font-size: 16px;
   font-weight: 700;
   padding: 1em 2.5em;
@@ -240,7 +242,7 @@ nav {
   color: var(--primary-light-color);
 }
 
-.about {
+.about-section {
   display: flex;
   flex-direction: column;
   padding: 3em;
@@ -250,7 +252,7 @@ nav {
 
 .heading-text {
   font-size: 30px;
-  font-family: 'Playfair Display SC', serif;
+  font-family: "Playfair Display SC", serif;
   font-weight: 700;
 }
 
@@ -272,36 +274,69 @@ nav {
 }
 
 .bachelors,
-.high-school{
+.high-school {
   margin-top: 1em;
 }
 
-.years{
+.years {
   font-size: 20px;
 }
 
 .school-name,
-.stream{
+.stream {
   font-size: 18px;
   line-height: 1.8em;
   margin-top: 0.5em;
 }
 
-.interest{
+.interest {
   margin-top: 2em;
 }
 
-.ul-list{
+.ul-list {
   display: flex;
   margin-top: 1em;
 }
 
-.interest-list{
+.interest-list {
   list-style: none;
   font-size: 18px;
   line-height: 1.8em;
 }
-.interest-list:nth-child(1){
+.interest-list:nth-child(1) {
   margin-right: 2em;
 }
 
+.stiky-section {
+  position: relative;
+  min-height: 220px;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.scroll-on {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  background-color: var(--primary-background);
+  padding: 1em 1.5em;
+  text-align: center;
+  color: var(--primary-dark-color);
+  font-family: "Playfair Display SC", serif;
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.skills-section {
+  padding: 3em;
+  background: var(--primary-background);
+  color: var(--primary-light-color);
+}
