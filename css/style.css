@@ -142,7 +142,7 @@ nav {
   width: 100%;
   padding: 4em 0 4em 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+    url(../images/hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -312,7 +312,7 @@ nav {
   min-height: 220px;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80);
+    url(../images/parallax.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -339,4 +339,79 @@ nav {
   padding: 3em;
   background: var(--primary-background);
   color: var(--primary-light-color);
+}
+
+.skills,
+.languages {
+  margin-top: 1em;
+  font-size: 18px;
+}
+
+.divider{
+  width: 25%;
+  height: 2px;
+  background-color: #ddd;
+  margin-top: 2em;
+}
+
+.skill-name{
+  margin-top: 1em;
+}
+
+@keyframes load{
+  from {
+    width: 0%;
+  }
+}
+
+.skill-bar {
+  position: relative;
+  width: 100%;
+  background-color: #ddd;
+  height: 2px;
+  margin-top: 0.5em;
+}
+
+.bar {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary-light-color);
+  height: 4px;
+}
+
+.html{
+  width: 95%;
+}
+.css{
+  width: 90%;
+}
+.js{
+  width: 75%;
+}
+.java{
+  width: 85%;
+}
+.cpp{
+  width: 70%;
+}
+.dart{
+  width: 85%;
+}
+.flutter{
+  width: 75%;
+}
+.figma{
+  width: 90%;
+}
+
+.bengali{
+  width: 100%;
+}
+.english{
+  width: 95%;
+}
+.hindi{
+  width: 90%;
 }

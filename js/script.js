@@ -4,15 +4,36 @@ const links = document.querySelectorAll(".link-list");
 const line1 = document.getElementById("line-1");
 const line2 = document.getElementById("line-2");
 const line3 = document.getElementById("line-3");
+const bars = document.querySelectorAll(".bar");
 
-hamburger.addEventListener("click", function () {
-    navLinks.classList.toggle("open-nav");
+bars.forEach(bar => {
+  bar.style.display = "none";
+});
 
-    links.forEach(link => {
-        link.classList.toggle("fade");
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 2200 ||
+    document.documentElement.scrollTop > 2200
+  ) {
+    bars.forEach(bar => {
+      bar.style.animation = "load 1s 0s";
+      bar.style.display = "block";
     });
+  }
+}
 
-    line1.classList.toggle("hover");
-    line2.classList.toggle("hover");
-    line3.classList.toggle("hover");
-})
+hamburger.addEventListener("click", function() {
+  navLinks.classList.toggle("open-nav");
+
+  links.forEach(link => {
+    link.classList.toggle("fade");
+  });
+
+  line1.classList.toggle("hover");
+  line2.classList.toggle("hover");
+  line3.classList.toggle("hover");
+});
