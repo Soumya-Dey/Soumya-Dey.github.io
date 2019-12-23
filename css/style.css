@@ -6,16 +6,19 @@
 
 body {
   font-family: "Nunito", sans-serif;
+  font-weight: 400;
 }
 
 :root {
   --primary-light-color: #4d5dbe;
-  --primary-dark-color: #161c41;
+  --primary-dark-color: #131c53;
   --primary-text-color: #000;
   --alternate-text-color: #fff;
 
   --primary-background: rgb(245, 245, 245);
   --alternate-background: rgb(230, 230, 238);
+
+  --heart-color: darkorange;
 }
 
 /* NAVBAR STYLES */
@@ -78,7 +81,7 @@ nav {
   transition: all 200ms ease;
 }
 .links:hover {
-  color: var(--primary-light-color);
+  color: var(--primary-text-color);
 }
 
 .link-list {
@@ -139,7 +142,6 @@ nav {
 }
 
 .left {
-  width: 100%;
   padding: 4em 0 4em 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../images/hero.jpg);
@@ -176,8 +178,7 @@ nav {
 
 .right {
   background-color: var(--primary-light-color);
-  width: 100%;
-  padding: 3em 0;
+  padding: 3em;
   color: var(--alternate-text-color);
   display: flex;
   flex-direction: column;
@@ -188,6 +189,12 @@ nav {
 .my-image {
   border-radius: 50%;
   margin-bottom: 2em;
+  width: 120px;
+  height: 120px;
+  background-image: url(../images/my-avatar-center.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .email-text {
@@ -201,7 +208,7 @@ nav {
 }
 
 .social-icons {
-  margin-top: 1.4em;
+  margin-top: 1.5em;
   margin-bottom: 1.5em;
   display: flex;
   justify-content: space-between;
@@ -247,18 +254,20 @@ nav {
   flex-direction: column;
   padding: 3em;
   background: var(--alternate-background);
-  color: var(--primary-light-color);
+  color: var(--primary-dark-color);
 }
 
 .heading-text {
   font-size: 30px;
   font-family: "Playfair Display SC", serif;
   font-weight: 700;
+  color: var(--primary-light-color);
 }
 
 .subheading-text {
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  color: var(--primary-light-color);
 }
 
 .about-text {
@@ -270,7 +279,7 @@ nav {
 .education-section {
   padding: 3em;
   background: var(--primary-background);
-  color: var(--primary-light-color);
+  color: var(--primary-dark-color);
 }
 
 .bachelors,
@@ -316,7 +325,7 @@ nav {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .scroll-on {
@@ -338,7 +347,7 @@ nav {
 .skills-section {
   padding: 3em;
   background: var(--primary-background);
-  color: var(--primary-light-color);
+  color: var(--primary-dark-color);
 }
 
 .skills,
@@ -348,9 +357,9 @@ nav {
 }
 
 .divider{
-  width: 25%;
+  width: 20%;
   height: 2px;
-  background-color: #ddd;
+  background-color: rgb(202, 202, 202);
   margin-top: 2em;
 }
 
@@ -367,7 +376,7 @@ nav {
 .skill-bar {
   position: relative;
   width: 100%;
-  background-color: #ddd;
+  background-color: rgb(202, 202, 202);
   height: 2px;
   margin-top: 0.5em;
 }
@@ -420,8 +429,8 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 3em;
-  color: var(--primary-light-color);
-  background: var(--alternate-background);
+  color: var(--primary-dark-color);
+  background: var(--primary-background);
 }
 
 .cards{
@@ -483,3 +492,57 @@ nav {
   opacity: 0.6;
 }
 
+.contact-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+  color: var(--primary-dark-color);
+  background: var(--alternate-background);
+}
+
+.heading-text-center{
+  font-size: 22px;
+  color: var(--primary-dark-color);
+}
+
+.social-link-dark{
+  color: var(--primary-dark-color);
+  opacity: 1;
+  font-weight: 600;
+}
+.social-link-dark:hover,
+.social-link-dark:focus{
+  opacity: 0.6;
+}
+
+.cv-button-dark{
+  background-color: var(--primary-light-color);
+  color: var(--alternate-text-color);
+}
+.cv-button-dark:hover,
+.cv-button-dark:focus{
+  color: var(--primary-dark-color)
+}
+
+.footer{
+  padding: 2em 10%;
+  background: var(--primary-light-color);
+  color: var(--alternate-text-color);
+  font-size: 18px;
+}
+
+.copyright-text,
+.love-text{
+  opacity: 0.8;
+}
+
+.love-text{
+  margin-top: 0.5em;
+}
+
+.love-text span{
+  color: rgb(255, 187, 0);
+  font-size: 22px;
+}

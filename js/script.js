@@ -16,11 +16,11 @@ window.onscroll = function() {
 
 function scrollFunction() {
   if (
-    document.body.scrollTop > 2200 ||
-    document.documentElement.scrollTop > 2200
+    document.body.scrollTop > 2180 ||
+    document.documentElement.scrollTop > 2180
   ) {
     bars.forEach(bar => {
-      bar.style.animation = "load 1s 0s";
+      bar.style.animation = "load 1.5s 0s";
       bar.style.display = "block";
     });
   }
