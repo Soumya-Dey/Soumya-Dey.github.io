@@ -1,3 +1,7 @@
+window.addEventListener("load", () => {
+  document.querySelector(".preloader").classList.add("loading-finish");
+});
+
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".link-list");

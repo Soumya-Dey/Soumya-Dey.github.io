@@ -17,6 +17,10 @@
   </head>
 
   <body>
+    <div class="preloader">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
     <nav class="navbar">
       <h1 class="logo">dEY.</h1>
 
@@ -286,5 +290,10 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script>
+      $(window).on("load", function() {
+        $(".loader-wrapper").fadeOut("slow");
+      });
+    </script>
   </body>
 </html>

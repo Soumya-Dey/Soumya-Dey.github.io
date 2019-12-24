@@ -21,6 +21,88 @@ body {
   --heart-color: darkorange;
 }
 
+/* PRELOADER */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(45deg, rgba(77,93,190,1) 0%, rgba(19,28,83,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  transition: opacity 1s ease;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #fff;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+
+.loading-finish{
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* NAVBAR STYLES */
 
 nav {
@@ -356,18 +438,18 @@ nav {
   font-size: 18px;
 }
 
-.divider{
+.divider {
   width: 20%;
   height: 2px;
   background-color: rgb(202, 202, 202);
   margin-top: 2em;
 }
 
-.skill-name{
+.skill-name {
   margin-top: 1em;
 }
 
-@keyframes load{
+@keyframes load {
   from {
     width: 0%;
   }
@@ -390,42 +472,42 @@ nav {
   height: 4px;
 }
 
-.html{
+.html {
   width: 95%;
 }
-.css{
+.css {
   width: 90%;
 }
-.js{
+.js {
   width: 75%;
 }
-.java{
+.java {
   width: 85%;
 }
-.cpp{
+.cpp {
   width: 70%;
 }
-.dart{
+.dart {
   width: 85%;
 }
-.flutter{
+.flutter {
   width: 75%;
 }
-.figma{
+.figma {
   width: 90%;
 }
 
-.bengali{
+.bengali {
   width: 100%;
 }
-.english{
+.english {
   width: 95%;
 }
-.hindi{
+.hindi {
   width: 90%;
 }
 
-.projects-section{
+.projects-section {
   display: flex;
   flex-direction: column;
   padding: 3em;
@@ -433,66 +515,66 @@ nav {
   background: var(--primary-background);
 }
 
-.cards{
+.cards {
   display: flex;
   flex-direction: column;
 }
 
-.card{
+.card {
   margin-top: 2em;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   transition: 400ms ease;
 }
-.card:hover{
+.card:hover {
   transform: scale(1.2);
 }
 
-.card-image{
+.card-image {
   height: 400px;
 }
 
-.image1{
+.image1 {
   height: 200px;
   background-image: url(../images/piggame_shot.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.image2{
+.image2 {
   background-image: url(../images/meals_shot.jpg);
   background-size: cover;
   background-position: top;
 }
 
-.image3{
+.image3 {
   background-image: url(../images/expense_shot.jpg);
   background-size: cover;
   background-position: top;
 }
 
-.image4{
+.image4 {
   background-image: url(../images/kolkata_shot.jpg);
   background-size: cover;
   background-position: top;
 }
 
-.card-info{
+.card-info {
   background-color: var(--primary-light-color);
   color: var(--alternate-text-color);
   padding: 1.5em;
 }
 
-.card-heading{
+.card-heading {
   font-size: 24px;
   margin-bottom: 1rem;
 }
 
-.card-description{
+.card-description {
   font-size: 18px;
   opacity: 0.6;
 }
 
-.contact-section{
+.contact-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -502,31 +584,30 @@ nav {
   background: var(--alternate-background);
 }
 
-.heading-text-center{
+.heading-text-center {
   font-size: 22px;
   color: var(--primary-dark-color);
 }
 
-.social-link-dark{
+.social-link-dark {
   color: var(--primary-dark-color);
   opacity: 1;
-  font-weight: 600;
 }
 .social-link-dark:hover,
-.social-link-dark:focus{
+.social-link-dark:focus {
   opacity: 0.6;
 }
 
-.cv-button-dark{
+.cv-button-dark {
   background-color: var(--primary-light-color);
   color: var(--alternate-text-color);
 }
 .cv-button-dark:hover,
-.cv-button-dark:focus{
-  color: var(--primary-dark-color)
+.cv-button-dark:focus {
+  color: var(--primary-dark-color);
 }
 
-.footer{
+.footer {
   padding: 2em 10%;
   background: var(--primary-light-color);
   color: var(--alternate-text-color);
@@ -534,15 +615,15 @@ nav {
 }
 
 .copyright-text,
-.love-text{
+.love-text {
   opacity: 0.8;
 }
 
-.love-text{
-  margin-top: 0.5em;
+.love-text {
+  margin-top: 0.1em;
 }
 
-.love-text span{
+.love-text span {
   color: rgb(255, 187, 0);
   font-size: 22px;
 }
