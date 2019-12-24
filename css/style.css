@@ -21,6 +21,26 @@ body {
   --heart-color: darkorange;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(220, 220, 220); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkorange;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: orange;
+}
+
 /* PRELOADER */
 
 .preloader {
@@ -375,6 +395,7 @@ nav {
 
 .years {
   font-size: 20px;
+  font-weight: 600;
 }
 
 .school-name,
@@ -660,6 +681,6 @@ nav {
 }
 
 .love-text span {
-  color: rgb(255, 187, 0);
+  color: var(--heart-color);
   font-size: 22px;
 }
