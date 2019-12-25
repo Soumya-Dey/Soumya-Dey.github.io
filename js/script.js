@@ -14,14 +14,26 @@ bars.forEach(bar => {
   bar.style.display = "none";
 });
 
-window.onscroll = function() {
-  scrollFunction();
-};
+var mediaWidth = window.matchMedia("(min-width: 768px)");
+mediaQueryFunction(mediaWidth);
+x.addListener(mediaQueryFunction);
 
-function scrollFunction() {
+function mediaQueryFunction(mediaW) {
+  if (mediaW.matches) { // If media query matches
+    window.onscroll = function() {
+      scrollFunction(1880);
+    };
+  } else {
+    window.onscroll = function() {
+      scrollFunction(2180);
+    };
+  }
+}
+
+function scrollFunction(topPx) {
   if (
-    document.body.scrollTop > 2180 ||
-    document.documentElement.scrollTop > 2180
+    document.body.scrollTop > topPx ||
+    document.documentElement.scrollTop > topPx
   ) {
     bars.forEach(bar => {
       bar.style.animation = "load 1.5s 0s";

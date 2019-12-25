@@ -10,7 +10,7 @@ body {
 }
 
 :root {
-  --primary-light-color: #4d5dbe;
+  --primary-light-color: #5469dc;
   --primary-dark-color: #131c53;
   --primary-text-color: #000;
   --alternate-text-color: #fff;
@@ -28,9 +28,9 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgb(220, 220, 220); 
+  background: rgb(220, 220, 220);
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: darkorange;
@@ -129,7 +129,7 @@ body {
 
 /* NAVBAR STYLES */
 
-nav {
+.navbar {
   position: relative;
   height: 80px;
   width: 100%;
@@ -164,6 +164,7 @@ nav {
   height: 100vh;
   width: 100%;
   margin: 0;
+  font-family: "Nunito", sans-serif;
   list-style: none;
   clip-path: circle(50px at 100% -10%);
   -webkit-clip-path: circle(50px at 100% -10%);
@@ -187,7 +188,7 @@ nav {
   transition: all 200ms ease;
 }
 .links:hover {
-  color: var(--primary-text-color);
+  color: rgb(200, 200, 200);
 }
 
 .link-list {
@@ -249,11 +250,12 @@ nav {
 
 .left {
   padding: 4em 0 4em 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)),
     url(../images/hero.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: scroll;
   color: var(--alternate-text-color);
   display: flex;
   flex-direction: column;
@@ -303,6 +305,11 @@ nav {
   background-size: cover;
 }
 
+.name-text-small {
+  font-size: 28px;
+  margin-bottom: 1em;
+}
+
 .email-text {
   margin-top: 1em;
   font-size: 18px;
@@ -317,8 +324,8 @@ nav {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
   display: flex;
-  justify-content: space-between;
-  width: 200px;
+  justify-content: space-around;
+  width: 240px;
   font-size: 24px;
 }
 
@@ -332,8 +339,7 @@ nav {
   cursor: pointer;
   transition: opacity 200ms ease;
 }
-.social-link:hover,
-.social-link:focus {
+.social-link:hover {
   opacity: 1;
 }
 
@@ -379,7 +385,7 @@ nav {
 .about-text {
   margin-top: 1em;
   font-size: 18px;
-  line-height: 1.8em;
+  line-height: 2em;
 }
 
 .education-section {
@@ -548,13 +554,14 @@ nav {
 .card {
   margin-top: 4em;
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
-  transition: 400ms ease;
+  transition: 300ms ease;
+  cursor: pointer;
 }
 .card:hover {
   transform: scale(1.05);
   box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.2);
 }
-.card:nth-child(1){
+.card:nth-child(1) {
   margin-top: 2em;
 }
 
@@ -571,9 +578,9 @@ nav {
 
 .image2 {
   height: 200px;
-  background-image: url(../images/piggame_shot.jpg);
+  background-image: url(../images/my-resume.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: left;
 }
 
 .image3 {
@@ -591,7 +598,7 @@ nav {
 .image5 {
   background-image: url(../images/kolkata_shot.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
 }
 
 .card-info {
@@ -615,7 +622,6 @@ nav {
 .read-more-button {
   background: var(--primary-background);
   font-family: "Nunito", sans-serif;
-  font-weight: 600;
   font-size: 16px;
   padding: 0.6em 2em;
   border: none;
@@ -625,11 +631,17 @@ nav {
   cursor: pointer;
   position: absolute;
   bottom: -12%;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
 }
-.more-info-link{
+.more-info-link {
   text-decoration: none;
   color: var(--primary-dark-color);
+  font-weight: 800;
+  transition: color 200ms ease;
+}
+.read-more-button:hover .more-info-link,
+.read-more-button:focus .more-info-link {
+  color: var(--primary-light-color);
 }
 
 .contact-section {
@@ -642,9 +654,17 @@ nav {
   background: var(--alternate-background);
 }
 
+.mail-phn {
+  text-align: center;
+}
+
 .heading-text-center {
   font-size: 22px;
   color: var(--primary-dark-color);
+}
+
+.social-cv {
+  text-align: center;
 }
 
 .social-link-dark {
@@ -665,6 +685,15 @@ nav {
   color: var(--primary-dark-color);
 }
 
+.scroll-up-arrow {
+  margin-top: 1.5em;
+  font-size: 30px;
+  padding: 0.4em 0.6em;
+  color: var(--primary-light-color);
+  border: 3px solid var(--primary-light-color);
+  cursor: pointer;
+}
+
 .footer {
   padding: 2em 10%;
   background: var(--primary-light-color);
@@ -683,5 +712,261 @@ nav {
 
 .love-text span {
   color: var(--heart-color);
-  font-size: 22px;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logo {
+    all: unset;
+    font-family: "Abril Fatface", "Playfair Display SC", serif;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--alternate-text-color);
+    transition: all 200ms ease;
+    margin: 0 8% 0 12%;
+  }
+
+  .nav-links {
+    all: unset;
+    list-style: none;
+    display: flex;
+    font-family: "Playfair Display SC", serif;
+  }
+
+  .link-list {
+    opacity: 1;
+    margin-right: 2em;
+  }
+
+  .links {
+    font-size: 17px;
+    text-transform: initial;
+    font-weight: normal;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .left {
+    width: 75%;
+    background-attachment: fixed;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .hello-text {
+    font-size: 20px;
+    margin-left: 10%;
+  }
+
+  .name-text {
+    font-size: 70px;
+    margin-bottom: 0.2em;
+    margin-left: 10%;
+  }
+
+  .info-text {
+    margin-left: 10%;
+    font-size: 20px;
+  }
+
+  .right {
+    width: 25%;
+    padding: 0.5em 3em 3em 3em;
+  }
+
+  .my-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .name-text-small {
+    font-size: 24px;
+    margin: 0 0 1em 0;
+  }
+
+  .info-text-aside {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .email-text {
+    margin-top: 4em;
+  }
+
+  .email-text,
+  .phone-text {
+    font-size: 14px;
+  }
+
+  .social-icons {
+    width: 180px;
+    font-size: 20px;
+    margin-top: 2em;
+    margin-bottom: 3em;
+  }
+
+  .cv-button {
+    font-size: 14px;
+    padding: 1em 2em;
+  }
+
+  .about-section {
+    padding: 6em 12%;
+  }
+
+  .subheading-text {
+    margin-top: 0.7em;
+  }
+
+  .about-text {
+    margin-top: 3rem;
+  }
+
+  .education-section {
+    padding: 6em 12%;
+  }
+
+  .bachelors {
+    margin-top: 3em;
+  }
+
+  .interest {
+    margin: 0;
+  }
+
+  .ul-list {
+    margin-top: 3em;
+  }
+
+  .stiky-section {
+    min-height: 300px;
+    background-attachment: fixed;
+  }
+
+  .skills-section {
+    padding: 6em 12%;
+  }
+
+  .skills {
+    margin-top: 3rem;
+  }
+
+  .skill1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+  }
+
+  .skill-name {
+    width: 20%;
+    margin: 0 2em 0 0;
+    font-size: 16px;
+  }
+
+  .skill-bar {
+    widows: 80%;
+  }
+
+  .divider {
+    width: 5%;
+    margin: 2.5em 0;
+  }
+
+  .projects-section {
+    padding: 6em 12%;
+  }
+
+  .cards {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-areas:
+      "card1 card1 card2"
+      "card3 card4 card5";
+    grid-gap: 4em;
+  }
+
+  .card {
+    margin: 0;
+  }
+  .card:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .card1 {
+    grid-area: card1;
+  }
+
+  .card2 {
+    grid-area: card2;
+  }
+
+  .card3 {
+    grid-area: card3;
+  }
+
+  .card4 {
+    grid-area: card4;
+  }
+
+  .card5 {
+    grid-area: card5;
+  }
+
+  .card-image {
+    height: 300px;
+  }
+
+  .card-heading {
+    font-size: 22px;
+  }
+
+  .card-description {
+    height: 70px;
+    font-size: 16px;
+  }
+
+  .contact-section {
+    padding: 6em 12%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mail-phn {
+    text-align: start;
+  }
+
+  .social-icons-dark {
+    margin-top: 0;
+  }
+
+  .scroll-up-arrow {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .footer{
+    padding: 2em 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .love-text{
+    margin: 0;
+  }
 }
