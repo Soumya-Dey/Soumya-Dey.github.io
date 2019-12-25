@@ -58,7 +58,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 99;
-  transition: opacity 1s ease;
+  transition: opacity 200ms ease;
 }
 
 .loader {
@@ -129,7 +129,7 @@ body {
 
 /* NAVBAR STYLES */
 
-.navbar {
+nav {
   position: relative;
   height: 80px;
   width: 100%;
