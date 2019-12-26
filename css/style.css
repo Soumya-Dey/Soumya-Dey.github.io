@@ -215,11 +215,10 @@ nav {
 }
 
 .hamburger {
-  position: absolute;
+  position: fixed;
   cursor: pointer;
   right: 10%;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 3.5%;
   z-index: 2;
 }
 
@@ -959,14 +958,14 @@ nav {
     font-size: 24px;
   }
 
-  .footer{
+  .footer {
     padding: 2em 12%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .love-text{
+  .love-text {
     margin: 0;
   }
 }
