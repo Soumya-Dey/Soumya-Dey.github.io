@@ -33,11 +33,11 @@ x.addListener(mediaQueryFunction);
 function mediaQueryFunction(mediaW) {
   if (mediaW.matches) { // If media query matches
     window.onscroll = function() {
-      scrollFunction(1880);
+      scrollFunction(2080);
     };
   } else {
     window.onscroll = function() {
-      scrollFunction(2180);
+      scrollFunction(3080);
     };
   }
 }

@@ -217,9 +217,13 @@ nav {
 .hamburger {
   position: fixed;
   cursor: pointer;
-  right: 10%;
-  top: 3.5%;
+  right: 0;
+  top: 3%;
   z-index: 2;
+  padding: 4px 30px 4px 6px;
+  background-color: var(--primary-dark-color);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .line {
