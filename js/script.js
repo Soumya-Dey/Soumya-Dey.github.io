@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
   document.querySelector(".preloader").classList.add("loading-finish");
 });
 
-var hamburger = document.querySelector(".hamburger");
+const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".link-list");
 const line1 = document.getElementById("line-1");
@@ -22,22 +22,37 @@ hamburger.addEventListener("click", function() {
   line3.classList.toggle("hover");
 });
 
+links.forEach(eachLink => {
+  eachLink.addEventListener("click", () => {
+    navLinks.classList.toggle("open-nav");
+
+    links.forEach(link => {
+      link.classList.toggle("fade");
+    });
+
+    line1.classList.toggle("hover");
+    line2.classList.toggle("hover");
+    line3.classList.toggle("hover");
+  });
+});
+
 bars.forEach(bar => {
   bar.style.display = "none";
 });
 
 var mediaWidth = window.matchMedia("(min-width: 768px)");
 mediaQueryFunction(mediaWidth);
-x.addListener(mediaQueryFunction);
+mediaWidth.addListener(mediaQueryFunction);
 
 function mediaQueryFunction(mediaW) {
-  if (mediaW.matches) { // If media query matches
+  if (mediaW.matches) {
+    // If media query matches
     window.onscroll = function() {
-      scrollFunction(2080);
+      scrollFunction(2000);
     };
   } else {
     window.onscroll = function() {
-      scrollFunction(3080);
+      scrollFunction(2800);
     };
   }
 }

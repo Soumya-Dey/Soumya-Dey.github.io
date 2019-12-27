@@ -129,7 +129,7 @@ body {
 
 /* NAVBAR STYLES */
 
-nav {
+.navbar {
   position: relative;
   height: 80px;
   width: 100%;
@@ -168,7 +168,7 @@ nav {
   list-style: none;
   clip-path: circle(50px at 100% -10%);
   -webkit-clip-path: circle(50px at 100% -10%);
-  transition: all 1s ease-out;
+  transition: all 1s ease;
   pointer-events: none;
   z-index: 1;
 }

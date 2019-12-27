@@ -22,7 +22,7 @@
       <span class="loader"><span class="loader-inner"></span></span>
     </div>
 
-    <nav class="navbar">
+    <nav class="navbar" id="home">
       <h1 class="logo">dEY.</h1>
 
       <div class="hamburger">
@@ -32,11 +32,15 @@
       </div>
 
       <ul class="nav-links">
-        <li class="link-list"><a href="#" class="links">Home</a></li>
-        <li class="link-list"><a href="#" class="links">About</a></li>
-        <li class="link-list"><a href="#" class="links">Education</a></li>
-        <li class="link-list"><a href="#" class="links">Skills</a></li>
-        <li class="link-list"><a href="#" class="links">Projects</a></li>
+        <li class="link-list"><a href="#home" class="links">Home</a></li>
+        <li class="link-list"><a href="#about" class="links">About</a></li>
+        <li class="link-list">
+          <a href="#education" class="links">Education</a>
+        </li>
+        <li class="link-list"><a href="#skills" class="links">Skills</a></li>
+        <li class="link-list">
+          <a href="#projects" class="links">Projects</a>
+        </li>
       </ul>
     </nav>
 
@@ -100,7 +104,7 @@
       </div>
     </div>
 
-    <div class="about-section">
+    <div class="about-section" id="about">
       <h2 class="heading-text">About</h2>
       <p class="subheading-text">My Background</p>
       <p class="about-text">
@@ -121,7 +125,7 @@
       </p>
     </div>
 
-    <div class="container education-section">
+    <div class="container education-section" id="education">
       <div class="education">
         <h2 class="heading-text">Education</h2>
         <p class="subheading-text">What I've Learned</p>
@@ -162,7 +166,7 @@
       <div class="scroll-on">Keep scrolling-on!</div>
     </div>
 
-    <div class="skills-section">
+    <div class="skills-section" id="skills">
       <h2 class="heading-text">Skills & Languages</h2>
       <p class="subheading-text">What I bring to the table</p>
 
@@ -250,7 +254,7 @@
       </div>
     </div>
 
-    <div class="projects-section">
+    <div class="projects-section" id="projects">
       <h2 class="heading-text">Projects</h2>
       <p class="subheading-text">What I've created</p>
       <div class="cards">
@@ -414,6 +418,7 @@
 
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
       window.addEventListener("load", () => {
         AOS.init({
@@ -430,6 +435,22 @@
             behavior: "smooth"
           });
         });
+
+      $(".navbar a").on("click", function(e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+
+          const hash = this.hash;
+          console.log(hash);
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top
+            },
+            800
+          );
+        }
+      });
     </script>
   </body>
 </html>
