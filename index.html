@@ -1,456 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Nunito:400,600,800|Playfair+Display+SC:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <title>Soumya's Resume</title>
-  </head>
 
-  <body>
-    <div class="preloader">
-      <span class="loader"><span class="loader-inner"></span></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="manifest" href="./images/site.webmanifest">
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Abril+Fatface|Nunito:400,600,800|Playfair+Display+SC:400,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <title>Soumya's Resume</title>
+</head>
+
+<body>
+  <div class="preloader">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+  <nav class="navbar" id="home">
+    <h1 class="logo">dEY.</h1>
+
+    <div class="hamburger">
+      <div class="line" id="line-1"></div>
+      <div class="line" id="line-2"></div>
+      <div class="line" id="line-3"></div>
     </div>
 
-    <nav class="navbar" id="home">
-      <h1 class="logo">dEY.</h1>
+    <ul class="nav-links">
+      <li class="link-list"><a href="#home" class="links">Home</a></li>
+      <li class="link-list"><a href="#about" class="links">About</a></li>
+      <li class="link-list">
+        <a href="#education" class="links">Education</a>
+      </li>
+      <li class="link-list"><a href="#skills" class="links">Skills</a></li>
+      <li class="link-list">
+        <a href="#projects" class="links">Projects</a>
+      </li>
+    </ul>
+  </nav>
 
-      <div class="hamburger">
-        <div class="line" id="line-1"></div>
-        <div class="line" id="line-2"></div>
-        <div class="line" id="line-3"></div>
-      </div>
+  <div class="container hero-section">
+    <div class="left">
+      <p class="hello-text" data-aos="fade-right" data-aos-delay="600">
+        Hello, I'm
+      </p>
+      <h1 class="name-text" data-aos="fade-right" data-aos-delay="900">
+        Soumya Dey.
+      </h1>
+      <p class="info-text" data-aos="fade-right" data-aos-delay="1200">
+        Honours in Computer Science
+      </p>
+    </div>
 
-      <ul class="nav-links">
-        <li class="link-list"><a href="#home" class="links">Home</a></li>
-        <li class="link-list"><a href="#about" class="links">About</a></li>
-        <li class="link-list">
-          <a href="#education" class="links">Education</a>
+    <div class="right">
+      <div class="my-image"></div>
+      <h1 class="name-text name-text-small">Soumya Dey.</h1>
+      <p class="info-text info-text-aside">
+        BSc in Computer Science.<br />Kolkata, India
+      </p>
+      <p class="email-text">soumyadey200@hotmail.com</p>
+      <p class="phone-text">(+91) 8584028749</p>
+
+      <ul class="social-icons">
+        <li class="social-list">
+          <a class="social-link" href="https://github.com/Soumya-Dey" target="_blank"><i class="fab fa-github"></i></a>
         </li>
-        <li class="link-list"><a href="#skills" class="links">Skills</a></li>
-        <li class="link-list">
-          <a href="#projects" class="links">Projects</a>
+        <li class="social-list">
+          <a class="social-link" href="https://codepen.io/soumyadey" target="_blank"><i class="fab fa-codepen"></i></a>
+        </li>
+        <li class="social-list">
+          <a class="social-link" href="https://www.facebook.com/soumya.dey.39948" target="_blank"><i
+              class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="social-list">
+          <a class="social-link" href="https://www.instagram.com/soumya_sl/" target="_blank"><i
+              class="fab fa-instagram"></i></a>
         </li>
       </ul>
-    </nav>
+      <button class="cv-button" type="button">Download CV</button>
+    </div>
+  </div>
 
-    <div class="container hero-section">
-      <div class="left">
-        <p class="hello-text" data-aos="fade-right" data-aos-delay="600">
-          Hello, I'm
+  <div class="about-section" id="about">
+    <h2 class="heading-text">About</h2>
+    <p class="subheading-text">My Background</p>
+    <p class="about-text">
+      Welcome to my world. I'm a proud and energetic teen based on Kolkata,
+      India, the cultural capital of the country. Right now I'm completing a
+      Bachelor of Science degree on Computer Science at Vivekananda Centenary
+      College.<br /><br />
+      I'm a creative designer and developer. I can create nice and stunning
+      websites, web and native applications for web, android and ios as well.
+      I like to create my applications using flutter, a great framework to
+      make apps for both android and ios using only one code-base. Now I'm
+      learning about web version of flutter. I also have good knowledge of
+      Java and c++, thanks to my college professors.<br />
+      I'm a huge football ⚽ fan, lover and player. Friends call me a big book
+      worm 📚. I like to make stuff by my own and travel places with my camera
+      📷. And lastly a nice and strong cup of coffee ☕ is always my companion
+      while coding.
+    </p>
+  </div>
+
+  <div class="container education-section" id="education">
+    <div class="education">
+      <h2 class="heading-text">Education</h2>
+      <p class="subheading-text">What I've Learned</p>
+      <div class="bachelors">
+        <h3 class="years">2019-Present</h3>
+        <p class="school-name">
+          Vivekananda Centenary College, Rahara, Kolkata, India
         </p>
-        <h1 class="name-text" data-aos="fade-right" data-aos-delay="900">
-          Soumya Dey.
-        </h1>
-        <p class="info-text" data-aos="fade-right" data-aos-delay="1200">
-          Honours in Computer Science
+        <p class="stream">Bachelors of Science in Computer Science</p>
+      </div>
+      <div class="high-school">
+        <h3 class="years">2008-2018</h3>
+        <p class="school-name">
+          Bidhannagar Govt. High School, Saltlake, Kolkata, India
         </p>
       </div>
+    </div>
 
-      <div class="right">
-        <div class="my-image"></div>
-        <h1 class="name-text name-text-small">Soumya Dey.</h1>
-        <p class="info-text info-text-aside">
-          BSc in Computer Science.<br />Kolkata, India
-        </p>
+    <div class="interest">
+      <h2 class="heading-text">Interests</h2>
+      <p class="subheading-text">Out of Work</p>
+      <div class="ul-list">
+        <ul class="interest-list">
+          <li>Reading stories</li>
+          <li>Football</li>
+          <li>Making DIY stuff</li>
+        </ul>
+        <ul class="interest-list">
+          <li>Photography</li>
+          <li>Listining music</li>
+          <li>Travel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="stiky-section">
+    <div class="scroll-on">Keep scrolling-on!</div>
+  </div>
+
+  <div class="skills-section" id="skills">
+    <h2 class="heading-text">Skills & Languages</h2>
+    <p class="subheading-text">What I bring to the table</p>
+
+    <div class="skills">
+      <div class="skill1">
+        <p class="skill-name">HTML</p>
+        <div class="skill-bar">
+          <div class="bar html"></div>
+        </div>
+      </div>
+
+      <div class="skill1">
+        <p class="skill-name">CSS</p>
+        <div class="skill-bar">
+          <div class="bar css"></div>
+        </div>
+      </div>
+
+      <div class="skill1">
+        <p class="skill-name">Javascript</p>
+        <div class="skill-bar">
+          <div class="bar js"></div>
+        </div>
+      </div>
+
+      <div class="skill1">
+        <p class="skill-name">Java</p>
+        <div class="skill-bar">
+          <div class="bar java"></div>
+        </div>
+      </div>
+
+      <div class="skill1">
+        <p class="skill-name">C & C++</p>
+        <div class="skill-bar">
+          <div class="bar cpp"></div>
+        </div>
+      </div>
+
+      <div class="skill1">
+        <p class="skill-name">Dart</p>
+        <div class="skill-bar">
+          <div class="bar dart"></div>
+        </div>
+      </div>
+
+      <div class="skill1">
+        <p class="skill-name">Flutter</p>
+        <div class="skill-bar">
+          <div class="bar flutter"></div>
+        </div>
+      </div>
+
+      <div class="skill1">
+        <p class="skill-name">Figma</p>
+        <div class="skill-bar">
+          <div class="bar figma"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="languages">
+      <div class="skill1">
+        <p class="skill-name">Bengali</p>
+        <div class="skill-bar">
+          <div class="bar bengali"></div>
+        </div>
+      </div>
+
+      <div class="skill1">
+        <p class="skill-name">English</p>
+        <div class="skill-bar">
+          <div class="bar english"></div>
+        </div>
+      </div>
+
+      <div class="skill1">
+        <p class="skill-name">Hindi</p>
+        <div class="skill-bar">
+          <div class="bar hindi"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects-section" id="projects">
+    <h2 class="heading-text">Projects</h2>
+    <p class="subheading-text">What I've created</p>
+    <div class="cards">
+      <div class="card card1">
+        <div class="card-image image1"></div>
+        <div class="card-info">
+          <div class="card-heading">PIG Game</div>
+          <div class="card-description">
+            A simple dice board game with a little twist made with vanilla
+            javascript.
+          </div>
+          <button class="read-more-button" type="button">
+            <a href="https://github.com/Soumya-Dey/PIG-Game" target="_blank" class="more-info-link">More info</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="card card2">
+        <div class="card-image image2"></div>
+        <div class="card-info">
+          <div class="card-heading">Budgety app</div>
+          <div class="card-description">
+            A budget controller app that calculates your monthly budget.
+          </div>
+          <button class="read-more-button" type="button">
+            <a href="https://github.com/Soumya-Dey/Budgety-app" target="_blank" class="more-info-link">More
+              info</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="card card3">
+        <div class="card-image image3"></div>
+        <div class="card-info">
+          <div class="card-heading">Deli Meals</div>
+          <div class="card-description">
+            A recipe app with dark mode for recipes of various meals.
+          </div>
+          <button class="read-more-button" type="button">
+            <a href="https://github.com/Soumya-Dey/Meals-app" target="_blank" class="more-info-link">More info</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="card card4">
+        <div class="card-image image4"></div>
+        <div class="card-info">
+          <div class="card-heading">Expense tracker</div>
+          <div class="card-description">
+            An personal expense tracker app with weekly stats made with
+            flutter.
+          </div>
+          <button class="read-more-button" type="button">
+            <a href="https://github.com/Soumya-Dey/Expense_tracker_app" target="_blank" class="more-info-link">More
+              info</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="card card5">
+        <div class="card-image image5"></div>
+        <div class="card-info">
+          <div class="card-heading">Kolkata Vocab</div>
+          <div class="card-description">
+            An easy to use tour guide app for the popular Indian city Kolkata.
+          </div>
+          <button class="read-more-button" type="button">
+            <a href="https://github.com/Soumya-Dey/Kolkata-Vocab-app" target="_blank" class="more-info-link">More
+              info</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <div class="name-mail-phn">
+      <h2 class="heading-text heading-text-center">
+        I'd love to hear from you
+      </h2>
+      <div class="mail-phn">
         <p class="email-text">soumyadey200@hotmail.com</p>
         <p class="phone-text">(+91) 8584028749</p>
-
-        <ul class="social-icons">
-          <li class="social-list">
-            <a
-              class="social-link"
-              href="https://github.com/Soumya-Dey"
-              target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-          </li>
-          <li class="social-list">
-            <a
-              class="social-link"
-              href="https://codepen.io/soumyadey"
-              target="_blank"
-              ><i class="fab fa-codepen"></i
-            ></a>
-          </li>
-          <li class="social-list">
-            <a
-              class="social-link"
-              href="https://www.facebook.com/soumya.dey.39948"
-              target="_blank"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-          </li>
-          <li class="social-list">
-            <a
-              class="social-link"
-              href="https://www.instagram.com/soumya_sl/"
-              target="_blank"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </li>
-        </ul>
-        <button class="cv-button" type="button">Download CV</button>
       </div>
     </div>
 
-    <div class="about-section" id="about">
-      <h2 class="heading-text">About</h2>
-      <p class="subheading-text">My Background</p>
-      <p class="about-text">
-        Welcome to my world. I'm a proud and energetic teen based on Kolkata,
-        India, the cultural capital of the country. Right now I'm completing a
-        Bachelor of Science degree on Computer Science at Vivekananda Centenary
-        College.<br /><br />
-        I'm a creative designer and developer. I can create nice and stunning
-        websites, web and native applications for web, android and ios as well.
-        I like to create my applications using flutter, a great framework to
-        make apps for both android and ios using only one code-base. Now I'm
-        learning about web version of flutter. I also have good knowledge of
-        Java and c++, thanks to my college professors.<br />
-        I'm a huge football ⚽ fan, lover and player. Friends call me a big book
-        worm 📚. I like to make stuff by my own and travel places with my camera
-        📷. And lastly a nice and strong cup of coffee ☕ is always my companion
-        while coding.
-      </p>
+    <div class="social-cv">
+      <ul class="social-icons social-icons-dark">
+        <li class="social-list">
+          <a class="social-link social-link-dark" href="https://github.com/Soumya-Dey" target="_blank"><i
+              class="fab fa-github"></i></a>
+        </li>
+        <li class="social-list">
+          <a class="social-link social-link-dark" href="https://codepen.io/soumyadey" target="_blank"><i
+              class="fab fa-codepen"></i></a>
+        </li>
+        <li class="social-list">
+          <a class="social-link social-link-dark" href="https://www.facebook.com/soumya.dey.39948" target="_blank"><i
+              class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="social-list">
+          <a class="social-link social-link-dark" href="https://www.instagram.com/soumya_sl/" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+
+      <button class="cv-button cv-button-dark" type="button">
+        Download CV
+      </button>
     </div>
 
-    <div class="container education-section" id="education">
-      <div class="education">
-        <h2 class="heading-text">Education</h2>
-        <p class="subheading-text">What I've Learned</p>
-        <div class="bachelors">
-          <h3 class="years">2019-Present</h3>
-          <p class="school-name">
-            Vivekananda Centenary College, Rahara, Kolkata, India
-          </p>
-          <p class="stream">Bachelors of Science in Computer Science</p>
-        </div>
-        <div class="high-school">
-          <h3 class="years">2008-2018</h3>
-          <p class="school-name">
-            Bidhannagar Govt. High School, Saltlake, Kolkata, India
-          </p>
-        </div>
-      </div>
+    <i class="fas fa-angle-up scroll-up-arrow"></i>
+  </div>
 
-      <div class="interest">
-        <h2 class="heading-text">Interests</h2>
-        <p class="subheading-text">Out of Work</p>
-        <div class="ul-list">
-          <ul class="interest-list">
-            <li>Reading stories</li>
-            <li>Football</li>
-            <li>Making DIY stuff</li>
-          </ul>
-          <ul class="interest-list">
-            <li>Photography</li>
-            <li>Listining music</li>
-            <li>Travel</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <div class="footer">
+    <p class="copyright-text">
+      &copy;2019 All rights reserved
+    </p>
+    <p class="love-text">
+      This website is made with <span>&hearts;</span> by Soumya
+    </p>
+  </div>
 
-    <div class="stiky-section">
-      <div class="scroll-on">Keep scrolling-on!</div>
-    </div>
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      AOS.init({
+        offset: -100
+      });
+    });
 
-    <div class="skills-section" id="skills">
-      <h2 class="heading-text">Skills & Languages</h2>
-      <p class="subheading-text">What I bring to the table</p>
-
-      <div class="skills">
-        <div class="skill1">
-          <p class="skill-name">HTML</p>
-          <div class="skill-bar">
-            <div class="bar html"></div>
-          </div>
-        </div>
-
-        <div class="skill1">
-          <p class="skill-name">CSS</p>
-          <div class="skill-bar">
-            <div class="bar css"></div>
-          </div>
-        </div>
-
-        <div class="skill1">
-          <p class="skill-name">Javascript</p>
-          <div class="skill-bar">
-            <div class="bar js"></div>
-          </div>
-        </div>
-
-        <div class="skill1">
-          <p class="skill-name">Java</p>
-          <div class="skill-bar">
-            <div class="bar java"></div>
-          </div>
-        </div>
-
-        <div class="skill1">
-          <p class="skill-name">C & C++</p>
-          <div class="skill-bar">
-            <div class="bar cpp"></div>
-          </div>
-        </div>
-
-        <div class="skill1">
-          <p class="skill-name">Dart</p>
-          <div class="skill-bar">
-            <div class="bar dart"></div>
-          </div>
-        </div>
-
-        <div class="skill1">
-          <p class="skill-name">Flutter</p>
-          <div class="skill-bar">
-            <div class="bar flutter"></div>
-          </div>
-        </div>
-
-        <div class="skill1">
-          <p class="skill-name">Figma</p>
-          <div class="skill-bar">
-            <div class="bar figma"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="divider"></div>
-
-      <div class="languages">
-        <div class="skill1">
-          <p class="skill-name">Bengali</p>
-          <div class="skill-bar">
-            <div class="bar bengali"></div>
-          </div>
-        </div>
-
-        <div class="skill1">
-          <p class="skill-name">English</p>
-          <div class="skill-bar">
-            <div class="bar english"></div>
-          </div>
-        </div>
-
-        <div class="skill1">
-          <p class="skill-name">Hindi</p>
-          <div class="skill-bar">
-            <div class="bar hindi"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="projects-section" id="projects">
-      <h2 class="heading-text">Projects</h2>
-      <p class="subheading-text">What I've created</p>
-      <div class="cards">
-        <div class="card card1">
-          <div class="card-image image1"></div>
-          <div class="card-info">
-            <div class="card-heading">PIG Game</div>
-            <div class="card-description">
-              A simple dice board game with a little twist made with vanilla
-              javascript.
-            </div>
-            <button class="read-more-button" type="button">
-              <a
-                href="https://github.com/Soumya-Dey/PIG-Game"
-                target="_blank"
-                class="more-info-link"
-                >More info</a
-              >
-            </button>
-          </div>
-        </div>
-
-        <div class="card card2">
-          <div class="card-image image2"></div>
-          <div class="card-info">
-            <div class="card-heading">My resume website</div>
-            <div class="card-description">
-              My own resume website made from scratch by me.
-            </div>
-            <button class="read-more-button" type="button">
-              <a
-                href="https://github.com/Soumya-Dey/Soumya-Dey.github.io"
-                target="_blank"
-                class="more-info-link"
-                >More info</a
-              >
-            </button>
-          </div>
-        </div>
-
-        <div class="card card3">
-          <div class="card-image image3"></div>
-          <div class="card-info">
-            <div class="card-heading">Deli Meals</div>
-            <div class="card-description">
-              A recipe app with dark mode for recipes of various meals.
-            </div>
-            <button class="read-more-button" type="button">
-              <a
-                href="https://github.com/Soumya-Dey/Meals-app"
-                target="_blank"
-                class="more-info-link"
-                >More info</a
-              >
-            </button>
-          </div>
-        </div>
-
-        <div class="card card4">
-          <div class="card-image image4"></div>
-          <div class="card-info">
-            <div class="card-heading">Expense tracker</div>
-            <div class="card-description">
-              An personal expense tracker app with weekly stats made with
-              flutter.
-            </div>
-            <button class="read-more-button" type="button">
-              <a
-                href="https://github.com/Soumya-Dey/Expense_tracker_app"
-                target="_blank"
-                class="more-info-link"
-                >More info</a
-              >
-            </button>
-          </div>
-        </div>
-
-        <div class="card card5">
-          <div class="card-image image5"></div>
-          <div class="card-info">
-            <div class="card-heading">Kolkata Vocab</div>
-            <div class="card-description">
-              An easy to use tour guide app for the popular Indian city Kolkata.
-            </div>
-            <button class="read-more-button" type="button">
-              <a
-                href="https://github.com/Soumya-Dey/Kolkata-Vocab-app"
-                target="_blank"
-                class="more-info-link"
-                >More info</a
-              >
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="contact-section">
-      <div class="name-mail-phn">
-        <h2 class="heading-text heading-text-center">
-          I'd love to hear from you
-        </h2>
-        <div class="mail-phn">
-          <p class="email-text">soumyadey200@hotmail.com</p>
-          <p class="phone-text">(+91) 8584028749</p>
-        </div>
-      </div>
-
-      <div class="social-cv">
-        <ul class="social-icons social-icons-dark">
-          <li class="social-list">
-            <a
-              class="social-link social-link-dark"
-              href="https://github.com/Soumya-Dey"
-              target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-          </li>
-          <li class="social-list">
-            <a
-              class="social-link social-link-dark"
-              href="https://codepen.io/soumyadey"
-              target="_blank"
-              ><i class="fab fa-codepen"></i
-            ></a>
-          </li>
-          <li class="social-list">
-            <a
-              class="social-link social-link-dark"
-              href="https://www.facebook.com/soumya.dey.39948"
-              target="_blank"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-          </li>
-          <li class="social-list">
-            <a
-              class="social-link social-link-dark"
-              href="https://www.instagram.com/soumya_sl/"
-              target="_blank"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </li>
-        </ul>
-
-        <button class="cv-button cv-button-dark" type="button">
-          Download CV
-        </button>
-      </div>
-
-      <i class="fas fa-angle-up scroll-up-arrow"></i>
-    </div>
-
-    <div class="footer">
-      <p class="copyright-text">
-        &copy;2019 All rights reserved
-      </p>
-      <p class="love-text">
-        This website is made with <span>&hearts;</span> by Soumya
-      </p>
-    </div>
-
-    <script src="js/script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      window.addEventListener("load", () => {
-        AOS.init({
-          offset: -100
+    document
+      .querySelector(".scroll-up-arrow")
+      .addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth"
         });
       });
 
-      document
-        .querySelector(".scroll-up-arrow")
-        .addEventListener("click", () => {
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth"
-          });
-        });
+    $(".navbar a").on("click", function (e) {
+      if (this.hash !== "") {
+        e.preventDefault();
 
-      $(".navbar a").on("click", function(e) {
-        if (this.hash !== "") {
-          e.preventDefault();
+        const hash = this.hash;
+        console.log(hash);
 
-          const hash = this.hash;
-          console.log(hash);
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top
+          },
+          800
+        );
+      }
+    });
+  </script>
+</body>
 
-          $("html, body").animate(
-            {
-              scrollTop: $(hash).offset().top
-            },
-            800
-          );
-        }
-      });
-    </script>
-  </body>
 </html>
