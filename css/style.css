@@ -510,9 +510,6 @@ body {
 .html {
   width: 95%;
 }
-.css {
-  width: 90%;
-}
 .js {
   width: 75%;
 }
@@ -530,6 +527,9 @@ body {
 }
 .figma {
   width: 90%;
+}
+.illustrator{
+  width: 75%;
 }
 
 .bengali {
