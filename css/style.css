@@ -562,14 +562,9 @@ body {
 
 .card {
   margin-top: 4em;
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.4);
+  position: relative;
   transition: 300ms ease;
-  cursor: pointer;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.2);
 }
 
 .card:nth-child(1) {
@@ -578,13 +573,17 @@ body {
 
 .card-image {
   height: 400px;
+  transition: background-position 500ms ease;
 }
 
 .image1 {
   height: 200px;
   background-image: url(../images/piggame_shot.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
+}
+.card:hover .image1{
+  background-position: bottom;
 }
 
 .image2 {
@@ -593,11 +592,17 @@ body {
   background-size: cover;
   background-position: left;
 }
+.card:hover .image2{
+  background-position: center;
+}
 
 .image3 {
   background-image: url(../images/meals_shot.jpg);
   background-size: cover;
   background-position: top;
+}
+.card:hover .image3{
+  background-position: center;
 }
 
 .image4 {
@@ -605,11 +610,17 @@ body {
   background-size: cover;
   background-position: top;
 }
+.card:hover .image4{
+  background-position: center;
+}
 
 .image5 {
   background-image: url(../images/kolkata_shot.jpg);
   background-size: cover;
   background-position: bottom;
+}
+.card:hover .image5{
+  background-position: center;
 }
 
 .card-info {
@@ -634,12 +645,13 @@ body {
   background: var(--primary-background);
   font-family: "Nunito", sans-serif;
   font-size: 16px;
-  padding: 0.6em 2em;
   border: none;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   bottom: -12%;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.4);
@@ -647,13 +659,27 @@ body {
 
 .more-info-link {
   text-decoration: none;
+  cursor: pointer;
   color: var(--primary-dark-color);
   font-weight: 800;
-  transition: color 200ms ease;
+  padding: 0.8em 1em 0.8em 1.4em;
+  transform: translateX(0.7em);
+  transition: transform 150ms ease;
+}
+
+.right-arrow {
+  color: var(--primary-dark-color);
+  margin-right: 1.4em;
+  opacity: 0;
+  transition: opacity 150ms ease;
 }
 
 .read-more-button:hover .more-info-link, .read-more-button:focus .more-info-link {
-  color: var(--primary-light-color);
+  transform: translateX(0);
+}
+
+.read-more-button:hover .right-arrow, .read-more-button:focus .right-arrow {
+  opacity: 1;
 }
 
 .contact-section {
@@ -699,11 +725,20 @@ body {
 
 .scroll-up-arrow {
   margin-top: 1.5em;
-  font-size: 30px;
-  padding: 0.4em 0.6em;
+  padding: 0.35em 0.7em;
   color: var(--primary-light-color);
   border: 3px solid var(--primary-light-color);
   cursor: pointer;
+}
+
+.up-arrow {
+  font-size: 28px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.scroll-up-arrow:hover .up-arrow, .scroll-up-arrow:focus .up-arrow {
+  transform: translateY(-6px);
 }
 
 .footer {
