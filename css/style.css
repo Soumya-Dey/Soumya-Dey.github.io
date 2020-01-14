@@ -1,5 +1,7 @@
 :root {
   --primary-light-color: #5469dc;
+  --primary-hover-color: #5468dcd5;
+  --alternate-hover-color: rgb(220, 220, 255);
   --primary-dark-color: #131c53;
   --primary-text-color: #000;
   --alternate-text-color: #fff;
@@ -181,7 +183,7 @@ body {
 }
 
 .links:hover {
-  color: rgb(200, 200, 200);
+  color: var(--alternate-hover-color);
 }
 
 .link-list {
@@ -358,10 +360,12 @@ body {
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  transition: all 200ms ease;
 }
 
 .cv-button:hover, .cv-button:focus {
-  color: var(--primary-light-color);
+  color: rgba(51, 51, 51, 1);
+  background-color: var(--alternate-hover-color);
 }
 
 .about-section {
@@ -424,7 +428,10 @@ body {
 .interest-list {
   list-style: none;
   font-size: 18px;
-  line-height: 1.8em;
+}
+
+.interest-list li{
+  margin-bottom: 1em;
 }
 
 .interest-list:nth-child(1) {
@@ -582,7 +589,7 @@ body {
   background-size: cover;
   background-position: top;
 }
-.card:hover .image1{
+.card:hover .image1 {
   background-position: bottom;
 }
 
@@ -592,7 +599,7 @@ body {
   background-size: cover;
   background-position: left;
 }
-.card:hover .image2{
+.card:hover .image2 {
   background-position: center;
 }
 
@@ -601,7 +608,7 @@ body {
   background-size: cover;
   background-position: top;
 }
-.card:hover .image3{
+.card:hover .image3 {
   background-position: center;
 }
 
@@ -610,7 +617,7 @@ body {
   background-size: cover;
   background-position: top;
 }
-.card:hover .image4{
+.card:hover .image4 {
   background-position: center;
 }
 
@@ -619,7 +626,7 @@ body {
   background-size: cover;
   background-position: bottom;
 }
-.card:hover .image5{
+.card:hover .image5 {
   background-position: center;
 }
 
@@ -720,7 +727,8 @@ body {
 }
 
 .cv-button-dark:hover, .cv-button-dark:focus {
-  color: var(--primary-dark-color);
+  background-color: var(--primary-hover-color);
+  color: var(--alternate-text-color);
 }
 
 .scroll-up-arrow {
@@ -745,7 +753,7 @@ body {
   padding: 2em 10%;
   background: var(--primary-light-color);
   color: var(--alternate-text-color);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .copyright-text, .love-text {
