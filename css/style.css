@@ -219,9 +219,9 @@ body {
   position: fixed;
   cursor: pointer;
   right: 0;
-  top: 2.5%;
+  top: 2.3%;
   z-index: 2;
-  padding: 4px 30px 4px 6px;
+  padding: 4px 12px 4px 6px;
   background-color: var(--primary-dark-color);
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -236,7 +236,7 @@ body {
 }
 
 #line-1.hover {
-  transform: rotate(45deg) translate(12px);
+  transform: rotate(135deg) translate(13px);
 }
 
 #line-2.hover {
@@ -244,10 +244,56 @@ body {
 }
 
 #line-3.hover {
-  transform: rotate(-45deg) translate(12px);
+  transform: rotate(-135deg) translate(13px);
+}
+
+.navbar_cv-button {
+  background: var(--primary-dark-color);
+  color: var(--alternate-text-color);
+  padding: 0.6em 1em;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 200ms ease;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  right: 72px;
+  transform: translateY(-50%);
+}
+
+.navbar-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--alternate-text-color);
 }
 
 /* HERO SECTION */
+
+@keyframes animated-mouse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .container {
   display: flex;
@@ -255,7 +301,7 @@ body {
 }
 
 .left {
-  padding: 4em 10% 4em 10%;
+  padding: 4em 10% 3em 10%;
   background: linear-gradient(rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)), url(../images/hero.jpg);
   background-size: cover;
   background-position: center;
@@ -287,6 +333,65 @@ body {
 .info-text {
   text-align: center;
   font-size: 18px;
+}
+
+#mouse-scroll {
+  margin-top: 3em;
+}
+
+#mouse-scroll span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  margin: 0 0 3px 5px;
+}
+
+#mouse-scroll .mouse {
+  height: 34px;
+  width: 20px;
+  border-radius: 10px;
+  transform: none;
+  border: 2px solid #ffffff;
+  top: 170px;
+}
+
+#mouse-scroll .down-arrow-1 {
+  margin-top: 8px;
+}
+
+#mouse-scroll .down-arrow-1, #mouse-scroll .down-arrow-2, #mouse-scroll .down-arrow-3 {
+  animation: mouse-scroll 1s infinite;
+}
+
+#mouse-croll .down-arrow-1 {
+  animation-delay: .1s;
+  animation-direction: alternate;
+}
+
+#mouse-scroll .down-arrow-2 {
+  animation-delay: .2s;
+  animation-direction: alternate;
+}
+
+#mouse-scroll .down-arrow-3 {
+  animation-delay: .3s;
+  animation-direction: alternate;
+}
+
+#mouse-scroll .mouse-in {
+  height: 8px;
+  width: 2.2px;
+  display: block;
+  margin: 5px auto;
+  background: #ffffff;
+  position: relative;
+}
+
+#mouse-scroll .mouse-in {
+  animation: mouse-animated 1.2s ease infinite;
 }
 
 .right {
@@ -432,7 +537,7 @@ body {
   font-size: 18px;
 }
 
-.interest-list li{
+.interest-list li {
   margin-bottom: 1em;
 }
 
@@ -524,7 +629,7 @@ body {
   width: 80%;
 }
 
-.py{
+.py {
   width: 55%;
 }
 
@@ -591,38 +696,42 @@ body {
   margin-top: 2em;
 }
 
-.card1{
-  background-image: linear-gradient(rgba(60,60,60,0.6), rgba(60,60,60,0.6)), url(../images/piggame_shot2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.card2{
-  background-image: linear-gradient(rgba(60,60,60,0.6), rgba(60,60,60,0.6)), url(../images/budget_app2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.card3{
-  background-image: linear-gradient(rgba(60,60,60,0.6), rgba(60,60,60,0.6)), url(../images/meals_shot3.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.card4{
-  background-image: linear-gradient(rgba(60,60,60,0.6), rgba(60,60,60,0.6)), url(../images/expense_shot1.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.card5{
-  background-image: linear-gradient(rgba(60,60,60,0.6), rgba(60,60,60,0.6)), url(../images/kolkata_shot4.jpg);
+.card1 {
+  background-image: linear-gradient(rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)), url(../images/piggame_shot2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
- .card-image {
+.card2 {
+  background-image: linear-gradient(rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)), url(../images/budget_app2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card3 {
+  background-image: linear-gradient(rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)), url(../images/meals_shot3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card4 {
+  background-image: linear-gradient(rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)), url(../images/expense_shot1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card5 {
+  background-image: linear-gradient(rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)), url(../images/kolkata_shot4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-image {
   height: 400px;
   transition: background-position 500ms ease;
 }
@@ -690,7 +799,7 @@ body {
   transform: translateX(0.3em);
 }
 
-.card-tag{
+.card-tag {
   background-color: var(--primary-background);
   color: var(--primary-dark-color);
   border-radius: 10px;
@@ -817,6 +926,9 @@ body {
     text-transform: initial;
     font-weight: normal;
   }
+  .navbar_cv-button {
+    display: none;
+  }
   .container {
     flex-direction: row;
     justify-content: space-between;
@@ -837,6 +949,9 @@ body {
   }
   .info-text {
     font-size: 20px;
+  }
+  #mouse-scroll{
+    display: none;
   }
   .right {
     width: 25%;
