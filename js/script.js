@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-  document.querySelector(".preloader").classList.add("loading-finish");
+    document.querySelector(".preloader").classList.add("loading-finish");
 });
 
 const hamburger = document.querySelector(".hamburger");
@@ -10,34 +10,34 @@ const line2 = document.getElementById("line-2");
 const line3 = document.getElementById("line-3");
 const bars = document.querySelectorAll(".bar");
 
-hamburger.addEventListener("click", function() {
-  navLinks.classList.toggle("open-nav");
-
-  links.forEach(link => {
-    link.classList.toggle("fade");
-  });
-
-  line1.classList.toggle("hover");
-  line2.classList.toggle("hover");
-  line3.classList.toggle("hover");
-});
-
-links.forEach(eachLink => {
-  eachLink.addEventListener("click", () => {
+hamburger.addEventListener("click", function () {
     navLinks.classList.toggle("open-nav");
 
-    links.forEach(link => {
-      link.classList.toggle("fade");
+    links.forEach((link) => {
+        link.classList.toggle("fade");
     });
 
     line1.classList.toggle("hover");
     line2.classList.toggle("hover");
     line3.classList.toggle("hover");
-  });
 });
 
-bars.forEach(bar => {
-  bar.style.display = "none";
+links.forEach((eachLink) => {
+    eachLink.addEventListener("click", () => {
+        navLinks.classList.toggle("open-nav");
+
+        links.forEach((link) => {
+            link.classList.toggle("fade");
+        });
+
+        line1.classList.toggle("hover");
+        line2.classList.toggle("hover");
+        line3.classList.toggle("hover");
+    });
+});
+
+bars.forEach((bar) => {
+    bar.style.display = "none";
 });
 
 var mediaWidth = window.matchMedia("(min-width: 768px)");
@@ -45,26 +45,26 @@ mediaQueryFunction(mediaWidth);
 mediaWidth.addListener(mediaQueryFunction);
 
 function mediaQueryFunction(mediaW) {
-  if (mediaW.matches) {
-    // If media query matches
-    window.onscroll = function() {
-      scrollFunction(1850);
-    };
-  } else {
-    window.onscroll = function() {
-      scrollFunction(2500);
-    };
-  }
+    if (mediaW.matches) {
+        // If media query matches
+        window.onscroll = function () {
+            scrollFunction(1850);
+        };
+    } else {
+        window.onscroll = function () {
+            scrollFunction(2500);
+        };
+    }
 }
 
 function scrollFunction(topPx) {
-  if (
-    document.body.scrollTop > topPx ||
-    document.documentElement.scrollTop > topPx
-  ) {
-    bars.forEach(bar => {
-      bar.style.animation = "load 1.5s 0s";
-      bar.style.display = "block";
-    });
-  }
+    if (
+        document.body.scrollTop > topPx ||
+        document.documentElement.scrollTop > topPx
+    ) {
+        bars.forEach((bar) => {
+            bar.style.animation = "load 1.5s 0s";
+            bar.style.display = "block";
+        });
+    }
 }
