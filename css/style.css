@@ -698,6 +698,11 @@ body {
     background: var(--primary-background);
 }
 
+.projects-heading {
+    display: flex;
+    align-items: center;
+}
+
 .cards {
     display: flex;
     flex-direction: column;
@@ -826,6 +831,13 @@ body {
     justify-content: center;
 }
 
+.projects-btn {
+    width: max-content;
+    margin: auto 18px;
+    border-radius: 16px;
+    background: var(--primary-light-color);
+}
+
 .more-info-link {
     text-decoration: none;
     cursor: pointer;
@@ -845,6 +857,13 @@ body {
     transition: all 150ms ease;
 }
 
+.projects-btn .more-info-link {
+    font-weight: 600;
+    padding: 0.38em 0.95em;
+    color: var(--alternate-text-color);
+    transform: none;
+}
+
 .read-more-button:hover .more-info-link,
 .read-more-button:focus .more-info-link {
     transform: translateX(0.4em);
@@ -854,6 +873,11 @@ body {
 .read-more-button:focus .right-arrow {
     opacity: 1;
     transform: translateX(0.3em);
+}
+
+.projects-btn:hover .more-info-link {
+    transform: none;
+    opacity: 0.9;
 }
 
 .card-tag {
