@@ -969,6 +969,12 @@ body {
     font-size: 16px;
 }
 
+.black-lives-matter {
+    background-color: var(--primary-text-color);
+    padding: 0.3em 0.6em;
+    border-radius: 6px;
+}
+
 .copyright-text,
 .love-text {
     opacity: 0.8;
@@ -976,10 +982,6 @@ body {
 
 .love-text {
     margin-top: 0.1em;
-}
-
-.love-text span {
-    color: var(--heart-color);
 }
 
 @media (min-width: 768px) {
