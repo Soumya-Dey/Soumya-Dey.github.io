@@ -227,7 +227,7 @@ body {
     right: 0;
     top: 2.3%;
     z-index: 2;
-    padding: 4px 12px 4px 6px;
+    padding: 4px 10px 4px 6px;
     background-color: var(--primary-dark-color);
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
@@ -973,6 +973,8 @@ body {
     background-color: var(--primary-text-color);
     padding: 0.3em 0.6em;
     border-radius: 6px;
+    width: max-content;
+    margin: 14px 0;
 }
 
 .copyright-text,
@@ -982,6 +984,10 @@ body {
 
 .love-text {
     margin-top: 0.1em;
+}
+
+.hide-sm {
+    display: none;
 }
 
 @media (min-width: 768px) {
@@ -1136,6 +1142,9 @@ body {
     .projects-section {
         padding: 6em 10%;
     }
+    .projects-btn a {
+        display: flex;
+    }
     .cards {
         margin-top: 3rem;
         display: grid;
@@ -1197,5 +1206,11 @@ body {
     }
     .love-text {
         margin: 0;
+    }
+    .black-lives-matter {
+        margin: 0;
+    }
+    .hide-sm {
+        display: block;
     }
 }
