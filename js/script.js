@@ -48,11 +48,11 @@ function mediaQueryFunction(mediaW) {
     if (mediaW.matches) {
         // If media query matches
         window.onscroll = function () {
-            scrollFunction(1850);
+            scrollFunction(2500);
         };
     } else {
         window.onscroll = function () {
-            scrollFunction(2500);
+            scrollFunction(4550);
         };
     }
 }

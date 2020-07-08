@@ -463,6 +463,10 @@ body {
     opacity: 1;
 }
 
+.mt-2_5 {
+    margin-top: 2.5em;
+}
+
 .cv-button {
     background: var(--alternate-text-color);
     color: var(--primary-dark-color);
@@ -517,6 +521,24 @@ body {
     margin-top: 1em;
     font-size: 18px;
     line-height: 2em;
+}
+
+.about-text span {
+    color: var(--alternate-text-color);
+    background-color: var(--heart-color);
+    padding: 0 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+.about-text i {
+    font-style: normal;
+    background-color: var(--heart-color);
+    width: 8px;
+    height: 8px;
+    font-size: 0.9em;
+    color: var(--alternate-text-color);
+    border-radius: 50%;
+    padding: 0 6px;
 }
 
 .education-section {
@@ -604,6 +626,44 @@ body {
     margin-top: 1em;
     font-size: 18px;
 }
+.skills {
+    display: grid;
+    margin-top: 2em;
+    grid-template-columns: 1fr;
+    grid-gap: 34px;
+}
+.skills > div {
+    transition: all 0.2s ease;
+    border-radius: 12px;
+}
+.skills > div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+}
+.skills-img-cont {
+    width: 100%;
+    height: 200px;
+    background-color: var(--alternate-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+    border-radius: 12px 12px 0 0;
+}
+.skills img {
+    width: 128px;
+    height: 128px;
+    border-radius: 6px;
+}
+.skills p {
+    text-align: center;
+    padding: 1em 0;
+    background-color: var(--primary-dark-color);
+    color: var(--alternate-text-color);
+    border-radius: 0 0 12px 12px;
+}
 
 .divider {
     width: 20%;
@@ -640,42 +700,6 @@ body {
     background-color: var(--primary-light-color);
     height: 4px;
     border-radius: 4px;
-}
-
-.html {
-    width: 95%;
-}
-
-.js {
-    width: 90%;
-}
-
-.node {
-    width: 80%;
-}
-
-.react {
-    width: 85%;
-}
-
-.mongo {
-    width: 75%;
-}
-
-.py {
-    width: 65%;
-}
-
-.java {
-    width: 85%;
-}
-
-.flutter {
-    width: 65%;
-}
-
-.figma {
-    width: 90%;
 }
 
 .bengali {
@@ -1095,10 +1119,6 @@ body {
     .about-text {
         margin-top: 3rem;
     }
-    .about-text span {
-        font-weight: 800;
-        opacity: 0.9;
-    }
     .education-section {
         padding: 6em 10%;
     }
@@ -1120,6 +1140,8 @@ body {
     }
     .skills {
         margin-top: 3rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 54px;
     }
     .skill1 {
         display: flex;
@@ -1137,7 +1159,7 @@ body {
     }
     .divider {
         width: 10%;
-        margin: 2.5em 0;
+        margin: 4em 0;
     }
     .projects-section {
         padding: 6em 10%;
